@@ -37,7 +37,6 @@ namespace CheckoutKatta
             }
         }
 
-        //public int Total
         public double Total
         {
             get

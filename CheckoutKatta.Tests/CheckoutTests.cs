@@ -27,7 +27,7 @@ namespace CheckoutKatta.Tests
             var promotions = new Promotions()
             .PromotionProduct("D", 3, 137.5);
 
-            checkout = new Checkout(catalog, discounts, promotions);
+            //checkout = new Checkout(catalog, discounts, promotions);
 
         }
 
