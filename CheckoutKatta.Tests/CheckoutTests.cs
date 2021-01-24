@@ -55,6 +55,21 @@ namespace CheckoutKatta.Tests
         }
 
 
+        [Theory]
+        [Test]
+        [TestCase("A", 10)]
+        [TestCase("B", 15)]
+        [TestCase("C", 40)]
+        [TestCase("D", 55)]
+        public void can_find_price_of_a_single_item(string sku, int expected_total)
+        {
+            // Act                                                               
+            checkout.Scan(sku);
+
+            // Assert                                                            
+            Assert.AreEqual(expected_total, checkout.Total);
+
+        }
 
 
     }
