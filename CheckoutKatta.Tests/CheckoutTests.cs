@@ -11,7 +11,7 @@ namespace CheckoutKatta.Tests
     [TestFixture]
     public class CheckoutTests
     {
-        //Checkout checkout;
+        Checkout checkout;
 
         [SetUp]
         public void BeforeTest()
@@ -26,6 +26,8 @@ namespace CheckoutKatta.Tests
 
             var promotions = new Promotions()
             .PromotionProduct("D", 3, 137.5);
+
+            checkout = new Checkout(catalog, discounts, promotions);
 
         }
 
