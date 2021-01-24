@@ -8,8 +8,10 @@ using CheckoutKatta;
 
 namespace CheckoutKatta.Tests
 {
+    [TestFixture]
     public class CheckoutTests
     {
+        //Checkout checkout;
 
         [SetUp]
         public void BeforeTest()
@@ -19,9 +21,12 @@ namespace CheckoutKatta.Tests
              .UpdateProductPrice("B", 15)
              .UpdateProductPrice("C", 40)
              .UpdateProductPrice("D", 55);
-
             var discounts = new Discounts()
-                   .DiscountProduct("B", 3, 40);
+                    .DiscountProduct("B", 3, 40);
+
+            var promotions = new Promotions()
+            .PromotionProduct("D", 3, 137.5);
+
         }
 
     }
