@@ -24,6 +24,7 @@ namespace CheckoutKatta.Tests
             var discounts = new Discounts()
                     .DiscountProduct("B", 3, 40);
 
+
             var promotions = new Promotions()
             .PromotionProduct("D", 3, 137.5);
 
@@ -75,7 +76,7 @@ namespace CheckoutKatta.Tests
         [Theory]
         [Test]
         [TestCase("B", 3, 40)]
-        [TestCase("D", 3, 137.5)]
+        //[TestCase("D", 3, 137.5)]
         public void can_find_price_for_multiple_items(string sku, int number_of_items, double expected_total)
         {
             // Act                                                               

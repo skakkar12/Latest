@@ -24,6 +24,7 @@ namespace CheckoutKatta
     public class Promotions
     {
         private List<Promotion> promotions = new List<Promotion>();
+        private List<Discount> discounts = new List<Discount>();
 
         public Promotions PromotionProduct(string sku, int numberOfItems, double percent)
         {
@@ -33,8 +34,8 @@ namespace CheckoutKatta
             return this;
         }
 
+
         public double GetPromotionPrice(string sku, ref int numberOfItemsToCalculatePriceFor)
-        //public int GetPromotionPrice(string sku, ref double numberOfItemsToCalculatePriceFor)
         {
             var promotion = this.promotions.Where(x => x.Sku == sku).FirstOrDefault();
             if (promotion == null) return 0; // no discounted price for this product
