@@ -48,7 +48,6 @@ namespace CheckoutKatta
                     var sku = group.Key;
                     var number_of_items = group.Value;
                     total += Discounts.GetDiscountedPrice(sku, ref number_of_items);
-                    total += Promotions.GetPromotionPrice(sku, ref number_of_items);
 
                     if (sku.ToString().Equals("D") && number_of_items!=1)
                     {

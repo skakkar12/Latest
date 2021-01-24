@@ -76,7 +76,7 @@ namespace CheckoutKatta.Tests
         [Theory]
         [Test]
         [TestCase("B", 3, 40)]
-        //[TestCase("D", 3, 137.5)]
+        [TestCase("D", 3, 137.5)]
         public void can_find_price_for_multiple_items(string sku, int number_of_items, double expected_total)
         {
             // Act                                                               
@@ -88,7 +88,7 @@ namespace CheckoutKatta.Tests
 
         [Theory]
         [TestCase("B", 3, 40)]
-        public void can_calculate_discounts(string sku, int number_of_items, int expected_total)
+        public void can_calculate_promotions(string sku, int number_of_items, int expected_total)
         {
             // Act                                                               
             checkout.Scan(sku, number_of_items);
