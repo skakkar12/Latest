@@ -72,6 +72,20 @@ namespace CheckoutKatta.Tests
         }
 
 
+        [Theory]
+        [Test]
+        [TestCase("B", 3, 40)]
+        [TestCase("D", 3, 137.5)]
+        public void can_find_price_for_multiple_items(string sku, int number_of_items, double expected_total)
+        {
+            // Act                                                               
+            checkout.Scan(sku, number_of_items);
+
+            // Assert                                                            
+            Assert.AreEqual(expected_total, checkout.Total);
+        }
+
+
     }
 }
     
