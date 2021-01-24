@@ -19,8 +19,11 @@ namespace CheckoutKatta.Tests
              .UpdateProductPrice("B", 15)
              .UpdateProductPrice("C", 40)
              .UpdateProductPrice("D", 55);
-            
+
+            var discounts = new Discounts()
+                   .DiscountProduct("B", 3, 40);
         }
 
     }
 }
+    
