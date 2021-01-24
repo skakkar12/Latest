@@ -97,6 +97,19 @@ namespace CheckoutKatta.Tests
         }
 
 
+        [Theory]
+        [TestCase("AABCCDC", 210)]
+        public void can_find_price_for_stream_of_items(string stream, int expected_total)
+        {
+            foreach (var sku in stream)
+            {
+                checkout.Scan("" + sku);
+            }
+
+            Assert.AreEqual(expected_total, checkout.Total);
+        }
+
+
     }
 }
     
