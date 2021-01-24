@@ -43,7 +43,18 @@ namespace CheckoutKatta.Tests
         }
 
 
-       
+        [Test]
+        public void can_find_price_of_a_single_item_B()
+        {
+            // Act                                                               
+            checkout.Scan("B");
+
+            // Assert                                                            
+            Assert.AreEqual(15, checkout.Total);
+
+        }
+
+
 
 
     }
