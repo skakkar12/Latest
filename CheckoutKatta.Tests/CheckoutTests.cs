@@ -85,6 +85,17 @@ namespace CheckoutKatta.Tests
             Assert.AreEqual(expected_total, checkout.Total);
         }
 
+        [Theory]
+        [TestCase("B", 3, 40)]
+        public void can_calculate_discounts(string sku, int number_of_items, int expected_total)
+        {
+            // Act                                                               
+            checkout.Scan(sku, number_of_items);
+
+            // Assert                                                            
+            Assert.AreEqual(expected_total, checkout.Total);
+        }
+
 
     }
 }
